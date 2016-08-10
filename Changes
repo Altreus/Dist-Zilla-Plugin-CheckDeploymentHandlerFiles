@@ -1,5 +1,9 @@
 {{$NEXT}}
 
+0.002     2016-08-10 13:25:36 BST
+
+  - Fixed search path to be good enough for our purposes for now
+
 0.001     2016-08-10 13:19:24 BST
 
   - First release
