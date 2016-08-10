@@ -3,7 +3,7 @@ package Dist::Zilla::Plugin::CheckDeploymentHandlerFiles;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Dist::Zilla ();
 use Moose;
