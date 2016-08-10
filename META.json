@@ -33,12 +33,22 @@
          "requires" : {
             "Dist::Zilla::PluginBundle::Author::ALTREUS" : "0.002"
          }
+      },
+      "runtime" : {
+         "requires" : {
+            "Class::Load" : "0",
+            "Dist::Zilla" : "0",
+            "File::ShareDir" : "0",
+            "File::pushd" : "0",
+            "Moose" : "0",
+            "namespace::autoclean" : "0"
+         }
       }
    },
    "provides" : {
       "Dist::Zilla::Plugin::CheckDeploymentHandlerFiles" : {
          "file" : "lib/Dist/Zilla/Plugin/CheckDeploymentHandlerFiles.pm",
-         "version" : "0.003"
+         "version" : "0.004"
       }
    },
    "release_status" : "stable",
@@ -53,7 +63,7 @@
          "web" : "https://github.com/Altreus/Dist-Zilla-Plugin-CheckDeploymentHandlerFiles"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_contributors" : [
       "Alastair McGowan-Douglas <alastair.mcgowan@opusvl.com>"
    ]

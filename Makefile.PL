@@ -15,15 +15,29 @@ my %WriteMakefileArgs = (
   "DISTNAME" => "Dist-Zilla-Plugin-CheckDeploymentHandlerFiles",
   "LICENSE" => "bsd",
   "NAME" => "Dist::Zilla::Plugin::CheckDeploymentHandlerFiles",
-  "PREREQ_PM" => {},
-  "VERSION" => "0.003",
+  "PREREQ_PM" => {
+    "Class::Load" => 0,
+    "Dist::Zilla" => 0,
+    "File::ShareDir" => 0,
+    "File::pushd" => 0,
+    "Moose" => 0,
+    "namespace::autoclean" => 0
+  },
+  "VERSION" => "0.004",
   "test" => {
     "TESTS" => ""
   }
 );
 
 
-my %FallbackPrereqs = ();
+my %FallbackPrereqs = (
+  "Class::Load" => 0,
+  "Dist::Zilla" => 0,
+  "File::ShareDir" => 0,
+  "File::pushd" => 0,
+  "Moose" => 0,
+  "namespace::autoclean" => 0
+);
 
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
