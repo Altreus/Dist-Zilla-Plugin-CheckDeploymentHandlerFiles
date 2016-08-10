@@ -16,7 +16,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "bsd",
   "NAME" => "Dist::Zilla::Plugin::CheckDeploymentHandlerFiles",
   "PREREQ_PM" => {},
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => ""
   }
