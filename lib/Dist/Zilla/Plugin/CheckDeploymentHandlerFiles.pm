@@ -48,8 +48,9 @@ sub before_release {
     # Make sure we're working in context of the build dir.
     $self->zilla->ensure_built;
     my $chdir = pushd($self->zilla->built_in);
+    unshift @INC, $chdir . '/lib';
 
-    my $script_dir = $self->script_directory . "/PostgreSQL/$previous-$version";
+    my $script_dir = $self->script_directory . "/PostgreSQL/upgrade/$previous-$version";
 
     $self->log( "Checking for $script_dir" );
 
