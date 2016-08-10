@@ -49,7 +49,7 @@ sub before_release {
     $self->zilla->ensure_built;
     my $chdir = pushd($self->zilla->built_in);
 
-    my $script_dir = $self->script_directory . "/$previous-$version";
+    my $script_dir = $self->script_directory . "/PostgreSQL/$previous-$version";
 
     $self->log( "Checking for $script_dir" );
 
