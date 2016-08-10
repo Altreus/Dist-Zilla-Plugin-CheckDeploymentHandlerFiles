@@ -3,7 +3,7 @@ package Dist::Zilla::Plugin::CheckDeploymentHandlerFiles;
 use strict;
 use warnings;
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 use Moose;
 use namespace::autoclean;
