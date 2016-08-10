@@ -5,7 +5,6 @@ use warnings;
 
 our $VERSION = '0.004';
 
-use Dist::Zilla ();
 use Moose;
 use namespace::autoclean;
 use File::ShareDir 'module_dir';
