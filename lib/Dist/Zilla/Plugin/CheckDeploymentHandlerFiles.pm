@@ -34,14 +34,23 @@ has script_directory => (
         my $self = shift;
         my $mod = $self->schema_module;
 
-        load_class $mod;
         return module_dir($mod) . '/sql';
     }
 );
 
+around schema_module => sub {
+    my $orig = shift;
+    my $self = shift;
+    my $mod = $self->$orig(@_);
+
+    load_module($mod);
+
+    $mod;
+};
+
 sub before_release {
     my $self = shift;
-    my $version = $self->zilla->version;
+    my $version = $self->schema_module->schema_version || $self->schema_module->version;
     my $previous = $version - 1;
 
     # Make sure we're working in context of the build dir.
