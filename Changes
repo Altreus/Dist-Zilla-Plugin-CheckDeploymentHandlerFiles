@@ -1,5 +1,9 @@
 {{$NEXT}}
 
+0.005     2016-09-27 15:41:38 BST
+
+  - Comparison version now comes from schema_version before $VERSION
+
 0.004     2016-08-10 14:09:16 BST
 
   - Fixed dependencies

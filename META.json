@@ -48,7 +48,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::CheckDeploymentHandlerFiles" : {
          "file" : "lib/Dist/Zilla/Plugin/CheckDeploymentHandlerFiles.pm",
-         "version" : "0.004"
+         "version" : "0.005"
       }
    },
    "release_status" : "stable",
@@ -63,7 +63,7 @@
          "web" : "https://github.com/Altreus/Dist-Zilla-Plugin-CheckDeploymentHandlerFiles"
       }
    },
-   "version" : "0.004",
+   "version" : "0.005",
    "x_contributors" : [
       "Alastair McGowan-Douglas <alastair.mcgowan@opusvl.com>"
    ]
