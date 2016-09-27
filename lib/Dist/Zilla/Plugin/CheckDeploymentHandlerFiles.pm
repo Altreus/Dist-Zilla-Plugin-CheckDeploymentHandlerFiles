@@ -43,7 +43,7 @@ around schema_module => sub {
     my $self = shift;
     my $mod = $self->$orig(@_);
 
-    load_module($mod);
+    load_class($mod);
 
     $mod;
 };
