@@ -23,7 +23,7 @@ my %WriteMakefileArgs = (
     "Moose" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.005",
+  "VERSION" => "0.006",
   "test" => {
     "TESTS" => ""
   }
