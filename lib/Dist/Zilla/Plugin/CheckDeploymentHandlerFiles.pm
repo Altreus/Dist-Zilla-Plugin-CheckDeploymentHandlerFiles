@@ -10,6 +10,7 @@ use namespace::autoclean;
 use File::ShareDir 'module_dir';
 use File::pushd;
 use Class::Load 'load_class';
+use Path::Tiny 'path';
 
 with 'Dist::Zilla::Role::BeforeRelease';
 
@@ -50,13 +51,16 @@ around schema_module => sub {
 
 sub before_release {
     my $self = shift;
+
+    my $libdir = path($self->zilla->built_in, 'lib')->absolute;
+    require lib;
+    lib->import("$libdir");
+
     my $version = $self->schema_module->schema_version || $self->schema_module->version;
     my $previous = $version - 1;
 
     # Make sure we're working in context of the build dir.
     $self->zilla->ensure_built;
-    my $chdir = pushd($self->zilla->built_in);
-    unshift @INC, $chdir . '/lib';
 
     my $script_dir = $self->script_directory . "/PostgreSQL/upgrade/$previous-$version";
 

@@ -4,3 +4,4 @@ requires "File::ShareDir";
 requires "namespace::autoclean";
 requires "File::pushd";
 requires "Class::Load";
+requires "Path::Tiny";
